@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset = "utf-8">
 	<title>Hello Cousera</title>
 </head>
 <link rel = "stylesheet" href="style.css">
 <body>
-<h1>Hello Counsera! It's great course. This is Xiaofan.<h1>
-<section>
-	Section 1
-	<article>Article 1</article>
-	<article>Article 2</article>
-	<article>Article 3</article>
-	<!-- Link to everysection in the page -->
-	<ul>
-		<li><a href="#section1">#section1</a></li>
-		<li><a href="#section2">#section1</a></li>
-		<li><a href="#section3">#section1</a></li>
-	</ul>
-</section>
-<section id ="section1">
+	<h1>Hello Counsera! It's great course. This is Xiaofan.<h1>
+	<section>
+		Section 1
+		<article>Article 1</article>
+		<article>Article 2</article>
+		<article>Article 3</article>
+		<!-- Link to everysection in the page -->
+		<ul>
+			<li><a href="#section1">#section1</a></li>
+			<li><a href="#section2">#section1</a></li>
+			<li><a href="#section3">#section1</a></li>
+		</ul>
+	</section>
+	<section id ="section1">
 	<h3>
 		Section1
 	</h3>
@@ -26,42 +27,39 @@
 		Hello this is section 1
 	</p>
 	
-</section>
-<section>
-	Section 2
-	<article>Article 4</article>
-	<article>Article 5</article>
-	<article>Article 6</article>
-	<div>Regular DIV element</div>
+	</section>
+	<section>
+		Section 2
+		<article>Article 4</article>
+		<article>Article 5</article>
+		<article>Article 6</article>
+		<div>Regular DIV element</div>
 
-	<!-- Internal link-->
+		<!-- Internal link-->
 <
-	<a href="same-directory.html" title="same dir link">
-		<div>
-			DIV Linking to a file in the same directory
-		</div>
-	</a>
-	<!-- External Link -->
-	<p> 
-		Let's link to a fb page!
-		<a href="http://wikipedia.org" target = "_blank" title = "wikipedia">
+		<a href="same-directory.html" title="same dir link">
+			<div>
+				DIV Linking to a file in the same directory
+			</div>
 		</a>
+		<!-- External Link -->
+		<p> 
+			Let's link to a fb page!
+			<a href="http://wikipedia.org" target = "_blank" title = "wikipedia">
+			</a>
+		</p>
+	</section>
+	<!-- example of escaping special characters -->
+	<p>
+		don't be afraid to be &lt; then 100% success &amp; &gt; more:
 	</p>
-</section>
-<p>
-	don't be afraid to be &lt; then 100% success &amp; &gt; more:
-</p>
 
 <!--Example of Image Display with Internal images under the same file with html (or attach an external link). Specify Width and height.-->
-<p>
-	<img src="picture-with-quote.jpg" width="400" height = "235" atl="picture-with-quote"> &quot; It is not the critic who counts; not the man who points out how the strong man stumbles &quot;
-</p>
+	<p>
+		<img src="picture-with-quote.jpg" width="400" height = "235" atl="picture-with-quote"> &quot; It is not the critic who counts; not the man who points out how the strong man stumbles &quot;
+	</p>
 
-<aside>
-	ASIDE - Some Information that relates to the main topic, i.e., related posts 
-</aside>
-
-<!-- Pseudo Class Selector -->
+<!-- Pseudo Class Selector and CSS Styles-->
 <title>Pseudo Class Selectors</title>
 <style>
 head li {
@@ -84,18 +82,33 @@ a:hover, a:active {
 	color: purple;
 }
 
-<!-- target specific child --> 
+
 header li:nth-child(3){
 	font-size: 24px;
 }
 
+#box {
+	background-color:blue;
+}
+
+#content {
+	background-color:#90EE90;
+}
+
 </style>
+
+<h1>Box Model</h1>
+<div id="box">
+	<div id="content">Some test messages for box model</div>
+</div>
+
 <header>
 	<ul>
 		<li><a href="/">Home</a></li>
 		<li><a href="www.wikipedia.org">Link</a></li>
 		<li><a href="link2">Link2</a></li>
 	</ul>
+</header>
 
 <footer>
 	JHU Copyright &copy; 2015

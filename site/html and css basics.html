@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+	<title>Hello Cousera</title>
+</head>
+<link rel = "stylesheet" href="style.css">
+<body>
+	<h1 id="first h1">Hello Counsera! It's great course. This is Xiaofan.<h1>
+	<section id="learn links">
+		Section 1
+		<article>Article 1</article>
+		<article>Article 2</article>
+		<article>Article 3</article>
+		<!-- Link to everysection in the page -->
+		<ul>
+			<li><a href="#section1">#section1</a></li>
+			<li><a href="#section2">#section1</a></li>
+			<li><a href="#section3">#section1</a></li>
+			<!-- link to external sources -->
+			<li><a href="/">Home</a></li>
+			<li><a href="www.wikipedia.org">Link</a></li>
+			<li><a href="link2">Link2</a></li>
+
+		</ul>
+	</section>
+	<section id ="section1">
+	<h3>
+		Section1
+	</h3>
+	<p>
+		Hello this is section 1
+	</p>
+	
+	</section>
+	<section id = "learn links">
+		Section 2
+		<article>Article 4</article>
+		<article>Article 5</article>
+		<article>Article 6</article>
+		<div>Regular DIV element</div>
+
+		<!-- Internal link-->
+<
+		<a href="same-directory.html" title="same dir link">
+			<div>
+				DIV Linking to a file in the same directory
+			</div>
+		</a>
+		<!-- External Link -->
+		<p id="learn links"> 
+			Let's link to a fb page!
+			<a href="http://wikipedia.org" target = "_blank" title = "wikipedia">
+			</a>
+		</p>
+	</section>
+	<!-- example of escaping special characters -->
+	<p id="learn links">
+		don't be afraid to be &lt; then 100% success &amp; &gt; more:
+	</p>
+
+<!--Example of Image Display with Internal images under the same file with html (or attach an external link). Specify Width and height.-->
+	<p id="learn links">
+		<img src="picture-with-quote.jpg" width="400" height = "235" atl="picture-with-quote"> &quot; It is not the critic who counts; not the man who points out how the strong man stumbles &quot;
+	</p>
+
+<!-- Pseudo Class Selector and CSS Styles-->
+<title>Pseudo Class Selectors</title>
+
+<style>
+head li {
+	list-style: none;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	background-color: green;
+	border:1px solid blue;
+	color: black;
+	display:block; 
+	width: 200px;
+	text-align:center;
+	margin-bottom:1px;
+}
+
+a:hover, a:active {
+	background-color: red;
+	color: purple;
+}
+
+
+header li:nth-child(3){
+	font-size: 24px;
+}
+</style>
+
+<!-- Playing with Box Model --> 
+<!-- margin:0 and padding:0 allows the box to reach the margins of the page --> 
+<!-- width default refers to content box. If you want to set it for the box, you should use box-sizing with border-box-->
+<!-- margin collapse when contents are top-down but merge when contents are left-right --> 
+<style>
+#box {
+	background-color:blue;
+	padding: 10px;
+	border: 5px solid black;
+	width:300px; 
+	height: 50px;
+	margin-top: 20px; //It has to be greater than the m of header. 
+	overflow: hidden; //auto gives you scroll
+}
+
+#content {
+	background-color:#90EE90; //green
+}
+
+* {
+	box-sizing: border-box; //does every browser supports it? 
+}
+
+body {
+	margin:0; 
+	padding:0;
+	background-color: white;
+}
+
+</style>
+
+<h1 id="Box Model">Box Model</h1>
+<div id="box">
+	<div id="content">Some test messages for box model</div>
+</div>
+
+<!--playing with background property -->
+<style>
+#bg {
+	width: 500px;
+	height:500px;
+	background-color: blue;
+	background: url("Xiaofan in nature copy.jpg") center
+
+}
+</style>
+
+<!-- Background Property --> 
+
+<h1 id="Background Property"> The Background Property</h1>
+<div id="bg">Background properties are fun! </div>
+
+<!-- Floating Elements -->
+<style>
+#floating {
+	background-color: #00FFFF;
+	width: 200px;
+	height: 200px;
+	margin-bottom: 50px;
+}
+
+* {
+	box-sizing: border-box;
+	margin:10px;
+}
+
+#p1, #p2 {
+	width: 50%; //paragrah takes 50% of the box
+	height:50px;
+	border: 1px solid black;
+	padding: 10px;
+	float:left;
+	/*float:left;
+	margin-right:10px;*/
+}
+
+#p1 {
+	background-color: #A52A2A;
+}
+
+#p2 {
+	background-color: #DEB887;
+	/*clear: both;*/
+}
+
+#floatingsection {
+	clear: left; //make sure nothing floats left of the texts
+}
+
+</style>
+
+<h1 id="floatingh1"> Floating Elements </h1>
+<div id="floating">
+	<p id="p1">Hellow this is contents for the box</p>
+	<p id="p2">Laaalalalalal miao miao miao</p>
+	<section id = "floatingsection">This is regular content continuing after the paragraph boxes. </section>
+</div>
+
+<!-- Relative and Absolute Element Positioning --> 
+<h1 id="positoning">Positioning Elements</h1>
+<style>
+
+* {
+	box-sizing: border-box;
+}
+
+h1#positioning {
+	margin-bottom:15px;
+}
+
+div#positioning {
+	background-color: #00FFFF;
+	width: 300px;
+	height: 300px;
+	position:relative;
+	top:60px; /* all elements within that box moves with it */
+}
+
+#p3, #p4 {
+	width:20%;
+	height:20%;
+	border:1px solid black;
+	margin-bottom: 15px;
+}
+
+#p3 {
+	background-color: #5F9EA0;
+	position:relative; /*offset experiment*/ 
+	left: 50px; /*it cannot move right and idk why*/
+	top: 50px;
+
+}
+#p4 {
+	background-color: #FF7F50;
+	position: absolute; /*//The way to set absolute position relative to a box is to set that box position as relatives. Otherwise it will trace all the way back to the element whose position is relative. Html is defalt to relative*/ 
+	top:0;
+	left:0; /*try to move this box to the left-top corner of the box*/
+
+}
+
+</style>
+
+<div id="positioning">
+	<p id="p3">Hella position</p>
+	<p id="p4">Hola position</p>
+</div>
+
+<footer>
+	JHU Copyright &copy; 2015
+</footer>
+</body>
+</html>
